@@ -46,7 +46,7 @@
 `zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix`
 `sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf`
 `sudo systemctl restart zabbix-server apache2`
-`sudo systemctl enable zabbix-server apache2`
+`sudo systemctl enable zabbix-server apache2`  
 
 ![Screenshot_1.jpg](https://github.com/rfedyunin/homework_docker_2/origin/Screenshot_1.jpg)
 
