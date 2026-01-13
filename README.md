@@ -35,7 +35,7 @@
 Прикрепите в файл README.md скриншот авторизации в админке.
 Приложите в файл README.md текст использованных команд в GitHub.
 
-
+```
 `sudo apt install postgresql`
 
 `wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_6.0+ubuntu24.04_all.deb`
@@ -57,16 +57,13 @@
 `sudo systemctl restart zabbix-server apache2`
 
 `sudo systemctl enable zabbix-server apache2`
-
-
-![Screenshot_1.jpg](https://github.com/rfedyunin/hw_zabbix_01/Screenshot_1.jpg)
-
-
 ```
 
+![Screenshot_1.jpg](https://github.com/rfedyunin/hw_zabbix_01/blob/main/Screenshot_1.jpg)
 
 ---
 
+```
 ### Задание 2
 
 Установите Zabbix Agent на два хоста.
