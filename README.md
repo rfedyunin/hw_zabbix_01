@@ -59,7 +59,7 @@
 `sudo systemctl enable zabbix-server apache2`
 
 
-![Screenshot_1.jpg](https://github.com/rfedyunin/homework_docker_2/origin/Screenshot_1.jpg)
+![Screenshot_1.jpg](https://github.com/rfedyunin/homework_docker_2/main/Screenshot_1.jpg)
 
 
 ```
