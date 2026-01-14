@@ -28,19 +28,21 @@
 
 Процесс выполнения
 
-Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
+1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
 
-Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11.
+2. Установите PostgreSQL. Для установки достаточна та версия, что есть в системном репозитороии Debian 11.
 
-Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.
+3. Пользуясь конфигуратором команд с официального сайта, составьте набор команд для установки последней версии Zabbix с поддержкой PostgreSQL и Apache.
 
-Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
+4. Выполните все необходимые команды для установки Zabbix Server и Zabbix Web Server.
 
 Требования к результатам
 
-Прикрепите в файл README.md скриншот авторизации в админке.
+1. Прикрепите в файл README.md скриншот авторизации в админке.
 
-Приложите в файл README.md текст использованных команд в GitHub.
+![Screenshot_1.jpg](https://github.com/rfedyunin/hw_zabbix_01/blob/main/Screenshot_1.jpg)
+
+2. Приложите в файл README.md текст использованных команд в GitHub.
 
 ```
 `sudo apt install postgresql`
@@ -66,8 +68,6 @@
 `sudo systemctl enable zabbix-server apache2`
 ```
 
-![Screenshot_1.jpg](https://github.com/rfedyunin/hw_zabbix_01/blob/main/Screenshot_1.jpg)
-
 ---
 
 
@@ -77,17 +77,36 @@
 
 Процесс выполнения
 
-Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
+1. Выполняя ДЗ, сверяйтесь с процессом отражённым в записи лекции.
 
-Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
+2. Установите Zabbix Agent на 2 вирт.машины, одной из них может быть ваш Zabbix Server.
 
-Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
+3. Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов.
 
-Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
+4. Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera.
 
-Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
-
-
+5. Проверьте, что в разделе Latest Data начали появляться данные с добавленных агентов.
 
 
+Требования к результатам
+1. Приложите в файл README.md скриншот раздела Configuration > Hosts, где видно, что агенты подключены к серверу
+
+![Screenshot_2.jpg](https://github.com/rfedyunin/hw_zabbix_01/blob/main/Screenshot_2.jpg)
+
+2. Приложите в файл README.md скриншот лога zabbix agent, где видно, что он работает с сервером
+
+![Screenshot_4.jpg](https://github.com/rfedyunin/hw_zabbix_01/blob/main/Screenshot_4.jpg)
+
+3. Приложите в файл README.md скриншот раздела Monitoring > Latest data для обоих хостов, где видны поступающие от агентов данные.
+
+![Screenshot_3.jpg](https://github.com/rfedyunin/hw_zabbix_01/blob/main/Screenshot_3.jpg)
+
+4. Приложите в файл README.md текст использованных команд в GitHub
+```
+sudo apt install zabbix-agent
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent
+sed -i 's/Server=127.0.0.1/Server=192.168.31.10'/g' /etc/zabbix/zabbix_agentd.conf
+
+```
 ---
